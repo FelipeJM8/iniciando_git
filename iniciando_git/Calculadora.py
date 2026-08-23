@@ -7,11 +7,27 @@ class Calculadora:
 
     @staticmethod
     def Fibonacci(numero: float) -> float:
-        pass
-
+        x = 0
+        y = 1
+        print(f"Fibonacci de {numero}:")
+        while x <= numero:
+            print(x, end=" ")
+            x, y = y, x + y
+        print()  # Print a newline after the sequence
     @staticmethod
     def Fatorial(numero: float) -> float:
-        pass
+
+        if numero % 1 != 0 or numero < 0:
+             return -9999
+        if numero == 0 or numero ==1:
+            return 1
+        
+        r = numero
+        numero -= 1
+        while numero>1:
+            r = r * numero
+            numero -= 1
+        return r 
 
 
 
@@ -44,7 +60,6 @@ def main():
 
         elif opcao == '2':
             result = Calculadora.Fibonacci(numero = numero)
-            print(f'Resultado do Fibonacci de {numero}: {result}')
 
         print("#############################################")
 
