@@ -16,7 +16,18 @@ class Calculadora:
         print()  # Print a newline after the sequence
     @staticmethod
     def Fatorial(numero: float) -> float:
-        pass
+
+        if numero % 1 != 0 or numero < 0:
+             return -9999
+        if numero == 0 or numero ==1:
+            return 1
+        
+        r = numero
+        numero -= 1
+        while numero>1:
+            r = r * numero
+            numero -= 1
+        return r 
 
 
 
